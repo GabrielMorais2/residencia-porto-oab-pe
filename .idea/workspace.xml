@@ -6,17 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="58ef6694-5138-4c73-a136-164ab2eceedc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/balancete_cfoab/BalanceteCFOAB.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/balancete_cfoab/BalanceteCFOAB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/balancete_cfoab/BalanceteCFOABController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/balancete_cfoab/BalanceteCFOABController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/balancete_cfoab/BalanceteCFOABService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/balancete_cfoab/BalanceteCFOABService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/base_orcamentaria/BaseOrcamentaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/base_orcamentaria/BaseOrcamentaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/base_orcamentaria/BaseOrcamentariaImportProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/base_orcamentaria/BaseOrcamentariaImportProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/base_orcamentaria/BaseOrcamentariaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/base_orcamentaria/BaseOrcamentariaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/base_orcamentaria/dto/BaseOrcamentariaRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/base_orcamentaria/dto/BaseOrcamentariaRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/identidade/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/identidade/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/identidade/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/identidade/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/pagamento_cotas/PagamentoCotasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/pagamento_cotas/PagamentoCotasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/instituicao/InstituicaoImportProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/instituicao/InstituicaoImportProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/pagamento_cotas/PagamentoCotasService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/pagamento_cotas/PagamentoCotasService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/PrestacaoContasSubseccional.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/PrestacaoContasSubseccional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/PrestacaoContasSubseccionalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/PrestacaoContasSubseccionalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/PrestacaoContasSubseccionalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/PrestacaoContasSubseccionalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/subseccional/SubseccionalImportProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/subseccional/SubseccionalImportProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/subseccional/SubseccionalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/portodigital/residencia/oabpe/domain/prestacao_contas_subseccional/subseccional/SubseccionalService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +35,12 @@
     &quot;assignee&quot;: &quot;JoaoLucasmcS&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/GabrielMorais2/residencia-porto-oab-pe.git",
-    "accountId": "2263a397-64e9-44df-9c2e-4b29e52cfd94"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GabrielMorais2/residencia-porto-oab-pe.git&quot;,
+    &quot;accountId&quot;: &quot;2263a397-64e9-44df-9c2e-4b29e52cfd94&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -70,7 +66,7 @@
     "git-widget-placeholder": "hotfix/ajustes-e-padronizacao-de-imports",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/luccas/Área de trabalho/programacao",
+    "last_opened_file_path": "C:/Users/ibiap/Documents/CESARSCHOOL - ADS/3-PERIODO/RESIDENCIA/residencia-porto-oab-pe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -135,7 +131,9 @@
       <workItem from="1747700191036" duration="2174000" />
       <workItem from="1748056018721" duration="5842000" />
       <workItem from="1748092264296" duration="8515000" />
-      <workItem from="1748214296202" duration="15119000" />
+      <workItem from="1748214296202" duration="15300000" />
+      <workItem from="1748356985871" duration="77000" />
+      <workItem from="1748439331751" duration="5635000" />
     </task>
     <servers />
   </component>

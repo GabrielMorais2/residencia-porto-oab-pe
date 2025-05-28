@@ -56,9 +56,9 @@ public class PagamentoCotasService extends AbstractFileImportService<PagamentoCo
         }
 
         var instituicao = instituicaoRepository.findByNomeAtivo(request.getInstituicaoNome())
-                .orElseThrow(() -> new EntityNotFoundException("Instituição não encontrada com ID: " + request.getInstituicaoNome()));
+                .orElseThrow(() -> new EntityNotFoundException("Instituição não encontrada com nome: " + request.getInstituicaoNome()));
         var tipoDesconto = tipoDescontoRepository.findByNomeAtivo(request.getTipoDesconto())
-                .orElseThrow(() -> new EntityNotFoundException("Tipo de desconto não encontrado com ID: " + request.getTipoDesconto()));
+                .orElseThrow(() -> new EntityNotFoundException("Tipo de desconto não encontrado com nome: " + request.getTipoDesconto()));
 
         User user = (User) authentication.getPrincipal();
         PagamentoCotas pagamentoCotas = mapper.map(request, PagamentoCotas.class);

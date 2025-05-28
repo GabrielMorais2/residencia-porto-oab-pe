@@ -2,16 +2,15 @@ package org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional;
 
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.portodigital.residencia.oabpe.domain.balancete_cfoab.dto.BalanceteCFOABResponseDTO;
 import org.portodigital.residencia.oabpe.domain.commons.AbstractFileImportService;
-import org.portodigital.residencia.oabpe.domain.demonstrativo.Demonstrativo;
 import org.portodigital.residencia.oabpe.domain.identidade.model.User;
+import org.portodigital.residencia.oabpe.domain.pagamento_cotas.PagamentoCotas;
+import org.portodigital.residencia.oabpe.domain.pagamento_cotas.dto.PagamentoCotasResponseDTO;
 import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.dto.PrestacaoContasSubseccionalFiltroRequest;
 import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.dto.PrestacaoContasSubseccionalRequestDTO;
 import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.dto.PrestacaoContasSubseccionalResponseDTO;
 import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.subseccional.Subseccional;
 import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.subseccional.SubseccionalRepository;
-import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.subseccional.dto.SubseccionalRequest;
 import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.tipo_desconto.TipoDesconto;
 import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.tipo_desconto.TipoDescontoRepository;
 import org.portodigital.residencia.oabpe.exception.EntityNotFoundException;
@@ -71,18 +70,15 @@ public class PrestacaoContasSubseccionalService extends AbstractFileImportServic
                 .orElseThrow(() -> new EntityNotFoundException("Prestação de contas não encontrado."));
     }
 
-    public void create(PrestacaoContasSubseccionalRequestDTO request) {
+    public PrestacaoContasSubseccionalResponseDTO create(PrestacaoContasSubseccionalRequestDTO request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || authentication.getPrincipal() == null) {
             throw new SecurityException("Acesso não autorizado");
         }
 
-        User user = (User) authentication.getPrincipal();
-        PrestacaoContasSubseccional prestacao = mapper.map(request, PrestacaoContasSubseccional.class);
-
-        LocalDate dtPrevEntr = prestacao.getDtPrevEntr();
-        LocalDate dtEntrega = prestacao.getDtEntrega();
-        LocalDate dtPagto = prestacao.getDtPagto();
+        LocalDate dtPrevEntr = request.getDtPrevEntr();
+        LocalDate dtEntrega = request.getDtEntrega();
+        LocalDate dtPagto = request.getDtPagto();
 
         if (dtEntrega != null && dtPrevEntr != null && dtEntrega.isAfter(dtPrevEntr)) {
             throw new IllegalArgumentException("A Data de Entrega não pode ser posterior à Data Prevista de Entrega.");
@@ -96,14 +92,19 @@ public class PrestacaoContasSubseccionalService extends AbstractFileImportServic
                 .orElseThrow(() -> new jakarta.persistence.EntityNotFoundException("Subseccional não encontrada com nome: " + request.getSubseccional()));
 
         TipoDesconto tipoDesconto = tipoDescontoRepository.findByNomeAtivo(request.getTipoDesconto())
-                .orElseThrow(() -> new jakarta.persistence.EntityNotFoundException("Subseccional não encontrada com nome: " + request.getTipoDesconto()));
+                .orElseThrow(() -> new jakarta.persistence.EntityNotFoundException("Tipo de desconto não encontrado com nome: " + request.getTipoDesconto()));
 
+        User user = (User) authentication.getPrincipal();
+        PrestacaoContasSubseccional prestacao = mapper.map(request, PrestacaoContasSubseccional.class);
         prestacao.setUser(user);
         prestacao.setValorPago(prestacao.getValorPago());
         prestacao.setSubseccional(subseccional);
         prestacao.setTipoDesconto(tipoDesconto);
 
-        prestacaoContasSubseccionalRepository.save(prestacao);
+        PrestacaoContasSubseccional saved = prestacaoContasSubseccionalRepository.save(prestacao);
+        PrestacaoContasSubseccionalResponseDTO dto = mapper.map(saved, PrestacaoContasSubseccionalResponseDTO.class);
+        dto.setTipoDesconto(saved.getTipoDesconto().getNome());
+        return dto;
     }
 
     public PrestacaoContasSubseccionalResponseDTO update(Long id, PrestacaoContasSubseccionalRequestDTO request) {

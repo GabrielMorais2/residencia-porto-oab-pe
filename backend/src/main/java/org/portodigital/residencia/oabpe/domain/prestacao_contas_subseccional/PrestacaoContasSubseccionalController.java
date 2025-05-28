@@ -61,8 +61,8 @@ public class PrestacaoContasSubseccionalController {
     @PostMapping
     @PreAuthorize("hasPermission('modulo_prestacao_contas_subseccional', 'ESCRITA')")
     public ResponseEntity<PrestacaoContasSubseccionalResponseDTO> create(@RequestBody PrestacaoContasSubseccionalRequestDTO request) {
-        prestacaoContasSubseccionalService.create(request);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        PrestacaoContasSubseccionalResponseDTO response = prestacaoContasSubseccionalService.create(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @Operation(summary = "Atualizar uma prestação de contas existente")

@@ -2,8 +2,6 @@ package org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.s
 
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.portodigital.residencia.oabpe.domain.balancete_cfoab.BalanceteCFOAB;
-import org.portodigital.residencia.oabpe.domain.balancete_cfoab.dto.BalanceteCFOABRequestDTO;
 import org.portodigital.residencia.oabpe.domain.commons.AbstractFileImportService;
 import org.portodigital.residencia.oabpe.domain.identidade.model.User;
 import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.subseccional.dto.SubseccionalRequest;

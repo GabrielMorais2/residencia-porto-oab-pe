@@ -67,7 +67,7 @@ public class PrestacaoContasSubseccional {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "Id_TipoDesconto")
+    @JoinColumn(name = "Id_TipoDesconto", referencedColumnName = "id")
     private TipoDesconto tipoDesconto;
 
     @Column(name = "DAT_CRIACAO_REGISTRO")

@@ -7,8 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.portodigital.residencia.oabpe.domain.commons.ImportProcessor;
 import org.portodigital.residencia.oabpe.domain.identidade.model.User;
 import org.portodigital.residencia.oabpe.domain.instituicao.dto.InstituicaoRequestDTO;
-import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.subseccional.Subseccional;
-import org.portodigital.residencia.oabpe.domain.prestacao_contas_subseccional.subseccional.dto.SubseccionalRequest;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
